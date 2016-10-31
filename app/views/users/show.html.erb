@@ -1,0 +1,27 @@
+<h1> <%= link_to @user.name, user_path(@user) %></h1>
+
+<p>This is where you will see stories, pics and videos.</p>
+
+<strong>Name: </strong>
+<%= @user.name %>
+<br>
+<strong>Email: </strong>
+<%= @user.email %>
+<br>
+<strong>Mobile: </strong>
+<%= @user.mobile %>
+<br>
+<strong>Address: </strong>
+<%= @user.address %>
+<br>
+<strong>DOB: </strong>
+<%= @user.dob %>
+
+
+<br>
+<%= link_to 'Back to welcome page', root_path %>
+
+
+
+<br>
+<%= link_to 'Edit your profile page!', edit_user_path %>

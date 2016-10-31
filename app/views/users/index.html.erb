@@ -1,7 +1,11 @@
-<h1>Welcome to FamBook</h1>
+<h1>Your FamBook Page</h1>
+
+
 
 <ul>
   <% @users.each do |user| %>
-  <li><%= user.name %></li>
+  <li><%= link_to user.name, user_path(user) %></li>
   <% end %>
 </ul>
+
+<%= link_to 'Homepage', root_path %>

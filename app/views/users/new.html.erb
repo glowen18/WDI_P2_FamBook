@@ -1,37 +1,5 @@
 <h1>Join Your FamBook!</h1>
 
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :mobile %>
-    <%= f.text_field :mobile %>
-  </div>
-  <div>
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-  <div>
-    <%= f.label :dob %>
-    <%= f.date_select :dob, :start_year => 1900, :end_year => Date.today.year %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back to Home Page', root_path %>
+  <%= render 'form', user: @user %>
+  <br>
+  <%= link_to 'Back to Home Page', root_path %>
