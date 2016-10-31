@@ -1,5 +1,5 @@
-<h1><%= current_user.name %>, edit Your Profile! </h1>
+<h1><%= current_user.name.capitalize %>, edit Your Profile! </h1>
 
 <%= render 'form', user: @user %>
 <br>
-<%= link_to 'Show your profile', @user %>
+<%= link_to 'Show your profile', user_path %>

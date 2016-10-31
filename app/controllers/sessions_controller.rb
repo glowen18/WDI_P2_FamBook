@@ -8,15 +8,12 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id.to_s
       redirect_to users_path
     else
-      render :new
-    end
+     render :new
+   end  
   end
-
-
-
 
   def destroy
     session.delete(:user_id)
-    redirect_to root_path
+    redirect_to login_path
   end
 end

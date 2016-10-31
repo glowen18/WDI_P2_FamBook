@@ -19,9 +19,10 @@
 
 
 <br>
-<%= link_to 'Back to welcome page', root_path %>
-
-
-
+<%= link_to 'Back to welcome page', users_path %>
 <br>
-<%= link_to 'Edit your profile page!', edit_user_path %>
+<br>
+<%= link_to 'Edit your profile page!', edit_user_path(@user) %>
+<br>
+<br>
+<%= link_to 'Delete your profile', :user, method: :delete, data: {confirm: "Are you sure?"} %>
