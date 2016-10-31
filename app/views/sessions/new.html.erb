@@ -14,4 +14,6 @@
   </div>
 <% end %>
 
-<%= link_to 'Log Out', logout_path, method: :delete %>
+<%= link_to 'Log Out', logout_path, method: :delete if current_user %>
+
+<%= current_user.name if current_user %>
