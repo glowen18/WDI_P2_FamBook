@@ -11,10 +11,11 @@
   </div>
   <div>
     <%= f.submit 'Log In' %>
-
   </div>
 <% end %>
 
 <%= link_to 'Log Out', logout_path, method: :delete if current_user %>
-
 <%= current_user.name if current_user %>
+<br>
+
+<%= link_to 'Back to home page', root_path %>
