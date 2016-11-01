@@ -13,6 +13,8 @@ class BoardsController < ApplicationController
     @board = Board.new(board_params)
 
     if @board.save
+      #associates board to user
+      @board.users << User.find_by(id: session[:user_id])
       redirect_to @board
     else
       render :new

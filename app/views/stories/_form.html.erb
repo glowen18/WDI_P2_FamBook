@@ -1,19 +1,19 @@
-<%= form_for ([@board, story]) do |f| %>
-  <% if story.errors.any? %>
+<%= form_for([board, @story]) do |f| %>
+  <% if @story.errors.any?  %>
     <div id="error_explanation">
-      <h2><%= pluralize(instruction.errors.count, 'error') %> prohibited this story from being saved:</h2>
+      <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
 
       <ul>
-        <% story.errors.full_messages.each do |message| %>
+        <% @story.errors.full_messages.each do |message| %>
           <li><%= message %></li>
        <% end %>
       </ul>
     </div>
   <% end %>
 
+
   <div class='field'>
-    <%= f.label :date %>
-    <%= f.date_select :date, :start_year => 1900, :end_year => Date.today.year %>
+    <%= select_date Date.today, prefix: :start_date %>
   </div>
   <div class='field'>
     <%= f.label :title %>
@@ -22,6 +22,10 @@
   <div class='field'>
     <%= f.label :description%>
     <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.hidden_field :board_id, :value => board.id %>
   </div>
 
   <div class='actions'>

@@ -18,6 +18,14 @@
 <%= @user.dob %>
 
 <%= render 'boards/form' %>
+<% @user.boards.each do |board| %>
+  <%= board.name %>
+    <% board.stories.each do |story| %>
+      <%= story.title %>
+    <% end %>
+    Add a story to this board.
+    <%= render 'stories/form', :board => board %>
+  <% end %>
 
     <br>
     <%= link_to 'Back to welcome page', users_path %>
