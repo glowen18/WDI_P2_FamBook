@@ -1,3 +1,16 @@
-<h1>This is my show page</h1>
+<h1>This is my Board show page</h1>
 
-<h2><%= @board.name %></h2>
+  <p>
+    <strong>title: </strong>
+    <%= @board.title %>
+  </p>
+
+  <ul>
+    <% @board.stories.each do |story| %>
+    <li><%= story.description %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Edit your Board', edit_board_path(@board) %>
+  <%= link_to 'Back', boards_path %>
+  <%= link_to 'Add another Board', new_board_story_path(@board) %>

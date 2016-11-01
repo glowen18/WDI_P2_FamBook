@@ -1,0 +1,16 @@
+<p>
+  <strong>Date</strong>
+  <%= @story.date %>
+</p>
+
+<p>
+  <strong>Title</strong>
+  <%= @story.title%>
+</p>
+<p>
+  <strong>Description</strong>
+  <%= @story.description%>
+</p>
+
+<%= link_to 'Edit your story', edit_story_path(@story) %> |
+<%= link_to 'Back to your FamBook', stories_path %>

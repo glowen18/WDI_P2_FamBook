@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  rescue_from ActionController::RedirectBackError, with: :redirect_to_default
   before_action :set_user, only:[:show, :edit, :update, :destroy]
 
 # GET /users
@@ -23,21 +24,17 @@ class UsersController < ApplicationController
 
 # GET /users/1
   def show
-    @user = User.find(params[:id])
   end
 
 # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
     if current_user != @user
-      redirect_to root_path
+      redirect_to :back
     end
   end
 
 # PATCH /users/1
   def update
-    @user = User.find(params[:id])
-
     if @user.update_attributes(params.require(:user).permit(:name, :email, :mobile, :address, :dob, :password, :password_confirmation))
       redirect_to users_path
     else
@@ -47,7 +44,6 @@ class UsersController < ApplicationController
 
 # DELETE /users/1
   def destroy
-    @user = User.find(params[:id])
     if current_user == @user
       @user.destroy
       redirect_to root_path
@@ -57,7 +53,15 @@ class UsersController < ApplicationController
   end
 
 private
+  def set_user
+    @user = User.find(params[:id])
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :mobile, :address, :dob, :password, :password_confirmation)
+  end
+
+  def redirect_to_default
+    redirect_to root_path
   end
 end

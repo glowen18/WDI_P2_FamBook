@@ -18,11 +18,13 @@
 <%= @user.dob %>
 
 
-<br>
-<%= link_to 'Back to welcome page', users_path %>
-<br>
-<br>
-<%= link_to 'Edit your profile page!', edit_user_path(@user) %>
-<br>
-<br>
-<%= link_to 'Delete your profile', :user, method: :delete, data: {confirm: "Are you sure?"} %>
+    <br>
+    <%= link_to 'Back to welcome page', users_path %>
+    <br>
+    <br>
+  <% if current_user == @user %>
+    <%= link_to 'Edit your profile page!', edit_user_path(@user) %>
+    <br>
+    <br>
+    <%= link_to 'Delete your profile', :user, method: :delete, data: {confirm: "Are you sure?"} %>
+  <% end %>
