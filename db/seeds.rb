@@ -8,3 +8,7 @@
 users = User.create([
   {name: 'Gaye Lowenstein', email: 'glowen@hotmail.com', mobile: '(310) 850-9896', address: "1032 19th St, No. 4, Santa Monica, CA 90403", dob: "May 24, 1962"}
   ])
+
+  boards = Board.create([
+    {name: 'The Lowenstein Family'}
+    ])
