@@ -6,15 +6,13 @@ class BoardsController < ApplicationController
   end
 
   def new
-    @board = Board.find(params[:board_id])
-    @story = Story.new
+    @board = Board.new
   end
 
   def create
-    @board = Board.find(params[:recipe_id])
-    @story = Story.new(story_params)
-    @story.board = @board
-    if @story.save
+    @board = Board.new(board_params)
+
+    if @board.save
       redirect_to @board
     else
       render :new
@@ -22,10 +20,23 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @board = Board.find(params[:board_id])
   end
 
   def edit
+  end
 
+  def update
+  end
+
+  def destroy
+  end
+
+private
+  def board_params
+    params.require(:board).permit(:name)
+  end
+
+  def set_board
+    @board = Board.find(params[:id])
   end
 end

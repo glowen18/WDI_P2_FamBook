@@ -1,8 +1,8 @@
 <h1>This is my Board show page</h1>
 
   <p>
-    <strong>title: </strong>
-    <%= @board.title %>
+    <strong>name: </strong>
+    <%= @board.name %>
   </p>
 
   <ul>
@@ -13,4 +13,4 @@
 
   <%= link_to 'Edit your Board', edit_board_path(@board) %>
   <%= link_to 'Back', boards_path %>
-  <%= link_to 'Add another Board', new_board_story_path(@board) %>
+  <%#= link_to 'Add another Board', new_board_story_path(@board) %>

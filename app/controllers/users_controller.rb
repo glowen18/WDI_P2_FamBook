@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
 # GET /users/1
   def show
+    @board = Board.new
   end
 
 # GET /users/1/edit
