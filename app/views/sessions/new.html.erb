@@ -4,6 +4,9 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for :login do |f| %>
+    <p><%= flash[:danger] %></p>
+
+
 
     <%= f.label :email %>
     <%= f.text_field :email, class: 'form-control' %>
