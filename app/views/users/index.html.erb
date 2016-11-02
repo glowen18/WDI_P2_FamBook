@@ -21,3 +21,8 @@
 </table>
 <br>
 <br>
+<%= link_to 'Back to Home Page', root_path, class: "btn btn-md btn-primary" %>
+
+<%= link_to "Back to your FamBook Page!", user_path(current_user), class: "btn btn-md btn-primary" %>
+
+<%= link_to 'Log In', new_session_path if !current_user%>
