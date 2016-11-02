@@ -1,6 +1,11 @@
-<h1> <%= @user.name %></h1><br>
-<h2><%= @user.email %></h2>
-
+<%= provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+    <h1><%= @user.name %></h1>
+    </section>
+  </aside>
+</div>
 <p>This is where you will see stories, pics and videos.</p>
 
 <strong>Name: </strong>
