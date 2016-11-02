@@ -25,8 +25,12 @@
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
+      <% if !current_user %>
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% else %>
+       <%= link_to 'Log in', login_path %>
+      <% end %>
+    <% end %>  
   </div>
 </div>
 

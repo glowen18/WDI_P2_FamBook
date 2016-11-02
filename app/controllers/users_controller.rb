@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
 # POST /users
   def create
-    @user = User.new(user_params[:user])
+    @user = User.new(user_params)
     if @user.save
 
     else
