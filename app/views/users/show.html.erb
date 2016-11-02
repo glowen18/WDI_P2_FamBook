@@ -7,6 +7,21 @@
   </aside>
 </div>
 <p>This is where you will see stories, pics and videos.</p>
+<table>
+  <tbody>
+    <tr>
+      <td><%= @user.name %></td>
+      <td><%= @user.email %></td>
+      <td><%= @user.mobile %></td>
+      <td><%= link_to 'Show', @user %></td>
+      <% if current_user == @user %>
+        <td><%= link_to 'Edit', edit_user_path(@user)%></td>
+        <td><%= link_to 'Delete', @user, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      <% end %>
+    </tr>
+
+  </tbody>
+</table>
 
 <strong>Name: </strong>
 <%= @user.name %>
