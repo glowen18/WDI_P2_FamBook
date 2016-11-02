@@ -1,21 +1,19 @@
+<% provide(:title, "Log in") %>
 <h1>Log In To Your Fambook</h1>
 
-<%= form_for :login do |f| %>
-  <div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for :login do |f| %>
+
     <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
+    <%= f.text_field :email, class: 'form-control' %>
+
     <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.submit 'Log In' %>
-  </div>
-<% end %>
+    <%= f.password_field :password, class: 'form-control' %>
 
-<%= link_to 'Log Out', logout_path, method: :delete if current_user %>
-<%= current_user.name if current_user %>
-<br>
+    <%= f.submit "Log In", class: "btn btn-primary" %>
+  <% end %>
 
-<%= link_to 'Back to home page', root_path %>
+  <p>New user? <%= link_to "Sign up now!", users_path %></p>
+  </div>
+</div>
