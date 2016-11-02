@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
-  get 'signup' => 'users#new'
-  post '/users' => 'users#create'
+  get 'signup' => 'users/new'
+
 
   get '/login' => 'sessions#new', as: :new_session
-  post '/login' => 'sessions#create'
+  post '/signup' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
   resources :users
