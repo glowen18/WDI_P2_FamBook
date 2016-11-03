@@ -49,20 +49,22 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 1. Go to [Github Project Page](https://github.com/glowen18/project_2_fambook1)
 
-2. Click on [deployable link](https://fambookapp.herokuapp.com/)
+2. Click on this [Online Link to FamBook](https://fambookapp.herokuapp.com/)
 
 3. Create a FamBook Page and Enjoy!
 
 ### Unsolved Problems
 
 
+
+##Trello
 [Trello User Stories](https://trello.com/b/059r2syb/project-2-famconnect)
 
 ##Wire Frames
 
-![Wireframe1](assets/01_welcome_index.png "Wireframe1")
-![Wireframe2](assets/02_home.png "Wireframe2")
-![Wireframe3](assets/03_user.png "Wireframe3")
+[Wireframe1](assets/01_welcome_index.png "Wireframe1")
+[Wireframe2](assets/02_home.png "Wireframe2")
+[Wireframe3](assets/03_user.png "Wireframe3")
 
 ##ERD Models  
 
