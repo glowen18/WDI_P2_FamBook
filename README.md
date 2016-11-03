@@ -36,15 +36,15 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 ### Technologies Used
 
-HTML
-SCSS
-Bootstrap
-Ruby on Rails
-PostgreSQL
-Active Record
-Git
-Github
-Heroku
+- HTML
+- SCSS
+- Bootstrap
+- Ruby on Rails
+- PostgreSQL
+- Active Record
+- Git
+- Github
+- Heroku
 
 [Trello User Stories](https://trello.com/b/059r2syb/project-2-famconnect)
 
