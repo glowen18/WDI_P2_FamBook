@@ -6,8 +6,7 @@ class BoardsController < ApplicationController
   end
 
   def new
-    @board = Board.find(params[:board_id])
-    @story = Story.new
+    @board = Board.new
   end
 
   def create
@@ -34,9 +33,8 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    if @board.destroy
+    @board.destroy
       redirect_to @board, notice: 'Board was successfully deleted.'
-    end
   end
 
 private

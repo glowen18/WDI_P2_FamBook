@@ -12,13 +12,12 @@
   <tbody>
     <% @stories.each do |story| %>
       <tr>
-        <td><%= story.date %></td>
+        <td><%= story.story_date %></td>
         <td><%= story.title %></td>
         <td><%= story.description %></td>
       </tr>
+    <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Story', new_story_path %>

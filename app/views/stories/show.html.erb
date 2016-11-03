@@ -9,5 +9,5 @@
   <%= @story.description%>
 </p>
 
-<%= link_to 'Edit your story', edit_story_path(@story) %> |
-<%= link_to 'Back to your FamBook', stories_path %>
+<%= link_to 'Edit your story', edit_board_story_path(@board, @story) %> |
+<%= link_to 'Back to your FamBook', @board %>

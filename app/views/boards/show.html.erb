@@ -15,10 +15,12 @@
     <% end %>
   </ul>
 
-  <br>
-  <%= link_to 'Edit your Board', edit_board_path(@board) %>
-  <br>
-  <%= link_to 'Delete your Board', boards_path  %>
+
+  <% if current_user == @user %>
+    <td><%= link_to 'Edit your Board', edit_board_path(@board)%></td>
+    <td><%= link_to 'Delete', @board, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+  <% end %>
+
   <br>
   <%= link_to 'Back to your Family Board', boards_path %>
   <br>
