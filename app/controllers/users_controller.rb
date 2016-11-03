@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id.to_s
+      log_in @user
       flash[:success] = "Welcome to FamBook!"
       redirect_to users_path
     else
@@ -33,9 +33,7 @@ class UsersController < ApplicationController
 
 # GET /users/1/edit
   def edit
-    if current_user != @user
-      redirect_to :back
-    end
+    @user = User.find(params[:id])
   end
 
 # PATCH /users/1
