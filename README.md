@@ -18,10 +18,10 @@ FamBook will be a website for families to:
 
 ##Wire Frames
 
-![Wireframe1](assets/IMG_0025.PNG "Wireframe1")
-![Wireframe2](assets/IMG_0026.PNG "Wireframe2")
-![Wireframe3](assets/IMG_0027.PNG "Wireframe3")
+![Wireframe1](assets/01_welcome_index.png "Wireframe1")
+![Wireframe2](assets/02_home.png "Wireframe2")
+![Wireframe3](assets/03_user.png "Wireframe3")
 
 ##ERD Models  
 
-![ERD Models](assets/erd_model.PNG)
+![ERD Models](assets/erd_fambook.png)
