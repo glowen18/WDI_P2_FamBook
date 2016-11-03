@@ -1,4 +1,10 @@
-# Project 2 - FamBook
+# Project 2 - FamBook App
+
+Created by Gaye Lowenstein
+
+- Special thanks to Mike Wong, Kate Wood and the WDI38-Santa Monica cohort... Thank you!
+
+__________________________________________
 
 FamBook will be a website for families to:
 
@@ -8,12 +14,12 @@ FamBook will be a website for families to:
 
 ### Approach
 
-FamBook was created with Ruby on Rails and Postgresql using MVC (Model-View-Controller) architecture with Active Record and RESTful routes.
+The FamBook App was created with Ruby on Rails. The data was created using Postgresql and Active Record with MVC (Model-View-Controller) architecture.
 
 The following steps were taken to create the FamBook App:
 
-1. Created the new rails app in Terminal
-2. Created 3 models in Terminal:
+1. Created the new rails app in the terminal
+2. Created 3 models in the terminal:
   * User model
   * Board model
   * Story model
