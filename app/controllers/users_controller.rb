@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   rescue_from ActionController::RedirectBackError, with: :redirect_to_default
   before_action :set_user, only:[:show, :edit, :update, :destroy]
+  
 
 # GET /users
   def index
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to FamBook!"
-      redirect_to users_path
+      redirect_to @user
     else
       render :new
     end
@@ -26,20 +27,24 @@ class UsersController < ApplicationController
 
 # GET /users/1
   def show
-    @user = set_user
+    @user = User.find(params[:id])
     @board = Board.new
     @story = Story.new
   end
 
 # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    if current_user != @user
+      redirect_to :back
+    end
   end
 
 # PATCH /users/1
   def update
+    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      redirect_to users_path
+      flash[:success] = "Profile updated"
+      redirect_to user_path
     else
       render :edit
     end

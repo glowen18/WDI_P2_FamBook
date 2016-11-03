@@ -2,5 +2,6 @@
 <h1>Update Your Profile!</h1>
 
 <%= render 'form', user: @user %>
+<p><%= flash[:danger] %></p>
 <br>
 <%= link_to 'Show your profile', user_path %>
