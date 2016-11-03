@@ -62,7 +62,7 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 ##Trello
 [Trello User Stories](https://trello.com/b/059r2syb/project-2-famconnect)
-![Trello Board](assets/trello_boaard.png)
+![Trello Board](assets/trello_board.png)
 
 ##Wire Frames
 
