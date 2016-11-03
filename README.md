@@ -8,19 +8,37 @@ FamBook will be a website for families to:
 
 ### Approach
 
-FamBook was created with Ruby on Rails and Postgresql using the MVC (Model-View-Controller) architecture.
+FamBook was created with Ruby on Rails and Postgresql using MVC (Model-View-Controller) architecture with Active Record and RESTful routes.
 
-After generating a model in the rails console, the following steps were taken:
+The following steps were taken to create the FamBook App:
 
-1. Confirm the migration data was correct
-2. Create the routes
-3. Code the model data
-4. Code the controller data
-5. Code the view data
+1. Created the new rails app in Terminal
+2. Created 3 models in Terminal:
+  * User model
+  * Board model
+  * Story model
+3. Migrated the models to the text editor Atom  
+4. Confirmed the migration data was correct
+5. Generated a controller for each model from the terminal
+6. Defined the 7 index actions in each controller:
+   * Index
+   * Show
+   * Create
+   * New
+   * Edit
+   * Update
+   * Destroy
+7. Defined the routes for each controller action
+8. Created View templates for the following actions as well as a partial form for refactoring the Show, Edit & New pages:
+  * Index
+  * Show
+  * Edit
+  * New
 
-The project consisted of coding an MVC for the User, Board and Story models. At each step a new Git Branch was created and tested in the browser.
+Before each step a new Git Branch was created and tested in the browser.
 
 After each modification, the changes were added, committed and pushed up to Github.
+
 At the end of each day, the updated Github version was deployed using Heroku.
 
 ### MVP
