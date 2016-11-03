@@ -62,7 +62,7 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 ##Wire Frames
 
-![Wireframe1](assets/01_welcome_index.png)
+![Wireframe1](assets/01_welcome_signup.png)
 ![Wireframe2](assets/02_home.png)
 ![Wireframe3](assets/03_user.png)
 
