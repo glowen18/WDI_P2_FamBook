@@ -25,11 +25,9 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 ### MVP
 
-* The user will be able to create a secure login and password.  
-
-* The user will have CRUD functionality for it's user, boards and stories.
-
-* On the user's Board page will be a table listing the user's Boards and Stories.
+* The user will be able to securely create a new account and login.
+* The user will be able to create a secure password.  
+* The user will be able to create, read, update and destroy their user account, boards and stories. (full CRUD functionality)
 
 ### Technologies Used
 
@@ -45,10 +43,8 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 ### Installation Instructions
 
-1. Go to [Github Project Page](https://github.com/glowen18/project_2_fambook1)
-
-2. Click on this [Online Link to FamBook](https://fambookapp.herokuapp.com/)
-
+1. Go to [Github Project Page - https://github.com/glowen18/project_2_fambook1](https://github.com/glowen18/project_2_fambook1)
+2. Click on this [Online Link to FamBook - https://fambookapp.herokuapp.com/](https://fambookapp.herokuapp.com/)
 3. Create a FamBook Page and Enjoy!
 
 ### Unsolved Problems
@@ -56,7 +52,7 @@ At the end of each day, the updated Github version was deployed using Heroku.
 1. Password reset does not connect to user's email.
 2. Need to create error message if email already in use.
 3. Need to create error message if password is not long enough.
-4. Get photos and  videos uploaded to the site.
+4. Ability to upload photos and videos to the site.
 5. Ability for users to post comments on the site.
 6. Ability to connect via email or social media on the site.
 
