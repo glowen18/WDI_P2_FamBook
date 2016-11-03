@@ -32,7 +32,7 @@ class BoardsController < ApplicationController
 
   def destroy
   end
-
+end
 private
   def board_params
     params.require(:board).permit(:name)
@@ -41,4 +41,3 @@ private
   def set_board
     @board = Board.find(params[:id])
   end
-end

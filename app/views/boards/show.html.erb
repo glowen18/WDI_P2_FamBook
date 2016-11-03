@@ -11,11 +11,7 @@
     <% end %>
   </ul>
 
-  <% @user.boards.each do |board| %>
-    <%= board.name %>
-      <% @board.stories.each do |story| %>
-        <%= story.title %>
-      <% end %>
+  
       Add a story to this board.
       <%= render 'stories/form', :board => board %>
     <% end %>
