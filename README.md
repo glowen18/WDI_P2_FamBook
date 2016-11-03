@@ -33,7 +33,6 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 * Each story will have photos, videos and a place for a user to comment and/or connect with that family member.  
 
-
 ### Technologies Used
 
 - HTML
@@ -45,6 +44,11 @@ At the end of each day, the updated Github version was deployed using Heroku.
 - Git
 - Github
 - Heroku
+
+### Installation Instructions
+
+### Unsolved Problems
+ 
 
 [Trello User Stories](https://trello.com/b/059r2syb/project-2-famconnect)
 
