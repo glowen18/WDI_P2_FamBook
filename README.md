@@ -29,9 +29,7 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 * The user will have CRUD functionality for it's user, boards and stories.
 
-* On the user's content page will be a summary of the user with links to different stories.
-
-* Each story will have photos, videos and a place for a user to comment and/or connect with that family member.  
+* On the user's Board page will be a table listing the user's Boards and Stories.
 
 ### Technologies Used
 
@@ -55,10 +53,16 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 ### Unsolved Problems
 
+1. Get photos and  videos uploaded to the site.
+
+2. Ability for users to post comments and/or connect with family members through the site.
+
+3. Password reset does not connect to user's email.  
 
 
 ##Trello
 [Trello User Stories](https://trello.com/b/059r2syb/project-2-famconnect)
+![Trello Board](assets/trello_boaard.png)
 
 ##Wire Frames
 
