@@ -53,12 +53,12 @@ At the end of each day, the updated Github version was deployed using Heroku.
 
 ### Unsolved Problems
 
-1. Get photos and  videos uploaded to the site.
-
-2. Ability for users to post comments and/or connect with family members through the site.
-
-3. Password reset does not connect to user's email.  
-
+1. Password reset does not connect to user's email.
+2. Need to create error message if email already in use.
+3. Need to create error message if password is not long enough.
+4. Get photos and  videos uploaded to the site.
+5. Ability for users to post comments on the site.
+6. Ability to connect via email or social media on the site.
 
 ##Trello
 [Trello User Stories](https://trello.com/b/059r2syb/project-2-famconnect)
