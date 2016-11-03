@@ -6,16 +6,14 @@ class BoardsController < ApplicationController
   end
 
   def new
-    @board = Board.new
+    @board = Board.find(params[:board_id])
+    @story = Story.new
   end
 
   def create
     @board = Board.new(board_params)
-
     if @board.save
-      #associates board to user
-      @board.users << User.find_by(id: session[:user_id])
-      redirect_to @board
+      redirect_to @board, notice: 'Board was successfully created.'
     else
       render :new
     end
@@ -28,16 +26,25 @@ class BoardsController < ApplicationController
   end
 
   def update
+    if @board.update(board_params)
+      redirect_to @board, notice: 'Board was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
-  end
-end
-private
-  def board_params
-    params.require(:board).permit(:name)
+    if @board.destroy
+      redirect_to @board, notice: 'Board was successfully deleted.'
+    end
   end
 
+private
   def set_board
     @board = Board.find(params[:id])
   end
+
+  def board_params
+    params.require(:board).permit(:name)
+  end
+end

@@ -1,3 +1,5 @@
+<p id=:notice><%= notice %></p>
+
 <h1>This is my Board show page</h1>
 
   <p>
@@ -7,15 +9,17 @@
 
   <ul>
     <% @board.stories.each do |story| %>
+    <li><%= story.story_date%></li>
+    <li><%= story.title %></li>
     <li><%= story.description %></li>
     <% end %>
   </ul>
 
-  
-      Add a story to this board.
-      <%= render 'stories/form', :board => board %>
-    <% end %>
-
+  <br>
   <%= link_to 'Edit your Board', edit_board_path(@board) %>
-  <%= link_to 'Back', boards_path %>
-  <%#= link_to 'Add another Board', new_board_story_path(@board) %>
+  <br>
+  <%= link_to 'Delete your Board', boards_path  %>
+  <br>
+  <%= link_to 'Back to your Family Board', boards_path %>
+  <br>
+  <%= link_to 'Add Another Story', new_board_story_path(@board) %>

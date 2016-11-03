@@ -1,6 +1,11 @@
+<p id=:notice><%= notice %></p>
+
 <h1>Edit Your Board</h1>
 
 <%= render 'form', board: @board %>
 
-<%= link_to 'Show your Board', @board %> |
-<%= link_to 'Back to your FamBook', boards_path %>
+<%= link_to 'Show your Board', @board %>
+<br>
+<%= link_to 'Delete your Board', @board  %>
+<br>
+<%= link_to 'Back', boards_path %>
