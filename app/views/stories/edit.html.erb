@@ -2,4 +2,6 @@
 
 <%= render 'form', story: @story %>
 
-<%= link_to 'Back to your Fambook', root_path %>
+<%= link_to 'Back to Your FamBook Board', boards_path, class: "btn btn-md btn-primary" %>
+
+<%= link_to 'Back to Your Story Board', board_path(@board),  class: "btn btn-md btn-primary" %>

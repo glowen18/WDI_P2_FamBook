@@ -29,8 +29,8 @@
   </tbody>
 </table>
 
-<br>
-<%= link_to 'New Board', new_board_path %>
+<%= link_to 'Back to your Story Board', board_stories_path(:board_id), class: "btn btn-md btn-primary"  %>
+
 <%= link_to 'Back to Home Page', root_path, class: "btn btn-md btn-primary" %>
 
 <%= link_to "Go to Your FamBook Page!", user_path(current_user), class: "btn btn-md btn-primary" %>

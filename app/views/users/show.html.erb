@@ -1,8 +1,8 @@
 <p id=:notice><%= notice %></p>
 
-<h1>This is my User show page</h1>
+<h1>FamBook Family</h1>
 
-<%= provide(:title, @user.name.capitalize) %>
+<h2><%= provide(:title, @user.name.capitalize) %></h2>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -10,7 +10,6 @@
     </section>
   </aside>
 </div>
-<p>This is where you will see stories, pics and videos.</p>
 
 <table class="table table-striped table-bordered table-hover">
   <thead>
@@ -37,8 +36,8 @@
   </tbody>
 </table>
 
-<%= render 'boards/form' %>
-
-    <br>
-    <%= link_to 'Back to welcome page', users_path %>
-    <br>
+  <%= render 'boards/form' %>
+  <br>
+  <%= link_to 'Go to your FamBook Board', @board, class: "btn btn-md btn-primary" %>
+  <%= link_to 'Back to Welcome Page', users_path, class: "btn btn-md btn-primary" %>
+  <br>

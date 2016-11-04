@@ -1,5 +1,4 @@
 
-
 <p>
   <strong>Title</strong>
   <%= @story.title%>
@@ -9,5 +8,5 @@
   <%= @story.description%>
 </p>
 
-<%= link_to 'Edit your story', edit_board_story_path(@board, @story) %> |
-<%= link_to 'Back to your FamBook', @board %>
+<%= link_to 'Edit your story', edit_board_story_path(@board, @story), class: "btn btn-md btn-primary" %>
+<%= link_to 'Back to your FamBook', @board, class: "btn btn-md btn-primary" %>
