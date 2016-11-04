@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   rescue_from ActionController::RedirectBackError, with: :redirect_to_default
   before_action :set_user, only:[:show, :edit, :update, :destroy]
-  
+
 
 # GET /users
   def index
@@ -34,9 +34,6 @@ class UsersController < ApplicationController
 
 # GET /users/1/edit
   def edit
-    if current_user != @user
-      redirect_to :back
-    end
   end
 
 # PATCH /users/1
@@ -52,12 +49,8 @@ class UsersController < ApplicationController
 
 # DELETE /users/1
   def destroy
-    if current_user == @user
-      @user.destroy
-      redirect_to root_path
-    else
-      redirect_to current_user
-    end
+    @user.destroy
+      redirect_to users_path
   end
 
   private

@@ -4,7 +4,7 @@
   <h2>This is the home page for FamBook!</h2>
 
   <% if current_user %>
-  <%= link_to "Back to your FamBook Page!", user_path(current_user), class: "btn btn-lg btn-primary" %>
+  <%= link_to "Back to your FamBook Page!", users_path, class: "btn btn-lg btn-primary" %>
   <% else %>
   <%= link_to "Sign up now!", new_user_path, class: "btn btn-lg btn-primary" %>
   <% end %>

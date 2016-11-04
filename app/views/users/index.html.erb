@@ -7,7 +7,8 @@
       <th>Email</th>
       <th>Mobile</th>
       <th>DOB</th>
-      <th></th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -18,13 +19,14 @@
         <td><%= user.email %></td>
         <td><%= user.mobile %></td>
         <td><%= user.dob %></td>
+        <td><%= link_to 'Edit', edit_user_path(user)%></td>
+        <td><%= link_to 'Delete', user, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
 <br>
-<br>
-<%= link_to 'Back to Welcome Page', root_path, class: "btn btn-md btn-primary" %>
 
 <%= link_to "Go to Your Profile Page", user_path(current_user), class: "btn btn-md btn-primary" %>
 
