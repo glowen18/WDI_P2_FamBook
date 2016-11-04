@@ -1,12 +1,19 @@
+<h1 class='header'>Stories About Your Family</h1>
+  <dl>
+    <% @board.stories.each do |story| %>
+      <br>
+    <dt><%= story.story_date %></dt>
+    <dt><%= story.title %></dt>
+    <dd><%= story.description %></dd>
+    <dd><%= link_to 'Edit this story', edit_board_story_path(@board, story), class: "btn btn-md btn-secondary" %></dd>
+    <% end %>
+  </dl>
 
-<p>
-  <strong>Title</strong>
-  <%= @story.title%>
-</p>
-<p>
-  <strong>Description</strong>
-  <%= @story.description%>
-</p>
+  <% if current_user == @user %>
+    <<%= link_to 'Edit your Board', edit_board_path(@board)%></td>
+    <%= link_to 'Delete', @board, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+  <% end %>
 
-<%= link_to 'Edit your story', edit_board_story_path(@board, @story), class: "btn btn-md btn-primary" %>
-<%= link_to 'Back to your FamBook', @board, class: "btn btn-md btn-primary" %>
+  <%= link_to 'Add Another Story', new_board_story_path(@board), class: "btn btn-md btn-primary" %>
+
+  <%= link_to 'Back To Your Family Board', boards_path(@board), class: "btn btn-md btn-primary" %>

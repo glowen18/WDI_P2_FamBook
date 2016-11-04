@@ -1,4 +1,4 @@
-<h1>Welcome to Your FamBook!</h1>
+<h1>Your Family</h1>
 
 <table class="table table-striped table-bordered table-hover">
   <thead>
@@ -24,8 +24,8 @@
 </table>
 <br>
 <br>
-<%= link_to 'Back to Home Page', root_path, class: "btn btn-md btn-primary" %>
+<%= link_to 'Back to Welcome Page', root_path, class: "btn btn-md btn-primary" %>
 
-<%= link_to "Go to Your FamBook Page!", user_path(current_user), class: "btn btn-md btn-primary" %>
+<%= link_to "Go to Your Profile Page", user_path(current_user), class: "btn btn-md btn-primary" %>
 
 <%= link_to 'Log In', new_session_path if !current_user%>

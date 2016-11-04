@@ -1,8 +1,7 @@
 <p id=:notice><%= notice %></p>
 
-<h1>FamBook Family</h1>
+<h1>Your Profile Page</h1>
 
-<h2><%= provide(:title, @user.name.capitalize) %></h2>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -38,6 +37,6 @@
 
   <%= render 'boards/form' %>
   <br>
-  <%= link_to 'Go to your FamBook Board', @board, class: "btn btn-md btn-primary" %>
-  <%= link_to 'Back to Welcome Page', users_path, class: "btn btn-md btn-primary" %>
+  <%= link_to 'Go To Family Boards', @board, class: "btn btn-md btn-primary" %>
+  <%= link_to 'Back to Your FamBook', users_path, class: "btn btn-md btn-primary" %>
   <br>

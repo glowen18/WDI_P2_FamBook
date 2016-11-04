@@ -1,23 +1,20 @@
-<h1>Tell us your Story</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Title</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @stories.each do |story| %>
-      <tr>
-        <td><%= story.story_date %></td>
-        <td><%= story.title %></td>
-        <td><%= story.description %></td>
-      </tr>
+<h1 class='header'>Stories About Your Family</h1>
+  <dl>
+    <% @board.stories.each do |story| %>
+      <br>
+    <dt><%= story.story_date %></dt>
+    <dt><%= story.title %></dt>
+    <dd><%= story.description %></dd>
+    <dd><%= link_to 'Edit this story', edit_board_story_path(@board, story) %></dd>
     <% end %>
-  </tbody>
-</table>
+  </dl>
 
-<%= link_to 'Back to your Story Board', boards_path %>
+  <% if current_user == @user %>
+    <<%= link_to 'Edit your Board', edit_board_path(@board)%></td>
+    <%= link_to 'Delete', @board, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+  <% end %>
+
+  <br>
+  <%= link_to 'Add Another Story', new_board_story_path(@board), class: "btn btn-md btn-primary" %>
+  <br>
+  <%= link_to 'Back To Your Family Board', boards_path(@board), class: "btn btn-md btn-primary" %>

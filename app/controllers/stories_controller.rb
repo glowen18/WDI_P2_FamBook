@@ -31,7 +31,7 @@ class StoriesController < ApplicationController
 
   def update
     if @story.update(story_params)
-      redirect_to @board, notice: 'Instruction was successfully updated.'
+      redirect_to @board, notice: 'Your story was successfully updated.'
     else
       render :edit
     end
