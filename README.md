@@ -68,7 +68,12 @@ At the end of each day, the updated Github version was deployed using Heroku.
 ### Installation Instructions
 
 1. Go to [Github Project Page - https://github.com/glowen18/project_2_fambook1](https://github.com/glowen18/project_2_fambook1)
-2. Click on this [Online Link to FamBook - https://fambookapp.herokuapp.com/](https://fambookapp.herokuapp.com/)
+2. Click on the 'Clone or download' button
+3. Go to your Terminal and type git clone
+4. Copy and paste the SSH key after git clone (space)
+5.
+
+this [Online Link to FamBook - https://fambookapp.herokuapp.com/]([]())
 3. Create a FamBook Page and Enjoy!
 
 ### Unsolved Problems
